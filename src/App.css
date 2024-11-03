@@ -1,38 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html,body {
+  height: 100%;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  border-radius: 100px;
+  background-color: white;
+  border:0;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-size: cover;
+  background-image: url('https://cdn.discordapp.com/attachments/962112565360607255/1010551273650651276/unknown.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  padding: 2%;
+  background-color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.pokedex {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.poke-grid {
+  width: 100%;
+  max-width: 440px;
+  height: 100%;
+  position: relative;
+background-color: white;
+border-radius: 20px;
+}
+
+.initial-slider {
+  z-index: 999;
+  opacity: 1 !important;
+  transition: 0.5s ease-in-out;
+}
+
+.hover-bullet {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 1000px;
+  border: 1px solid green;
+  transition: 0.5s ease-in-out;
+}
+
+.hover-bullet:hover {
+  padding:2px;
+}
+
+.pokemon-single {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+border-radius: 20px;
+}
+
+.pokemon-single img {
+  width: 70%;
 }
